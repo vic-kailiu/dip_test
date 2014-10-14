@@ -130,7 +130,7 @@ function generateQuestion() {
 	//boxes
 	var content= "<div class='horizontal' id='drag_container'>"
 	for (i=0; i< count; i++) {
-		content += "<div class='box_model' style='width:"+(95/count)+"%'><div class='model' id='model"+i.toString()+"'></div></div>";
+		content += "<div class='box_model' style='width:"+(95/count)+"%'><div class='model' id='model"+i.toString()+"' draggable='true'></div></div>";
 	}
 	content += "</div>"
 	dragDiv.innerHTML += content;
@@ -147,8 +147,25 @@ function highlight(e) {
 	keywordDiv.innerHTML += e.target.textContent + " ";
 }
 
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/html");
+    ev.target.appendChild(document.getElementById(data));
+}
+
 function registerEvents() {
-	$('#text').on('click','.clickable', highlight);
+	//$('#text').on('click','.clickable', highlight);
+	$(".clickable").click(highlight);
+	//$(".box").drop(drop);
+	//$(".box").dragover(allowDrop);
 }
 
 registerEvents();
