@@ -63,16 +63,17 @@ function generateQuestion() {
 		s = s.replace(regex,' $1'); //add space before punctuations for splitting
 		words = s.split(" ");
 		//write to html
-		textDiv.innerHTML += "<p>";
+		var content = "<p>";
 		for (j = 0; j < words.length; j++) {
 			if (punctuations.indexOf(words[j][0]) > -1) { // is a punctuation
-				textDiv.innerHTML += words[j];
+				content += words[j];
 			}
 			else {
-				textDiv.innerHTML += "<button>" + words[j] + "</button>";
+				content += "<button>" + words[j] + "</button>";
 			}
 		}
-		textDiv.innerHTML += "</p>"
+		content += "</p>";
+		textDiv.innerHTML += content;
 	}
 	
 	//Keyword section
@@ -95,11 +96,13 @@ function generateQuestion() {
 	questionDiv.innerHTML = "";	//reset content
 	
 	questionDiv.innerHTML += "<div class='boxno3' id='boxno3_question'></div>"
-	questionDiv.innerHTML += "<div class='horizontal'>"
+	
+	var content= "<div class='horizontal'>"
 	for (i=0; i< count; i++) {
-		questionDiv.innerHTML += "<div class='box' id='box"+i.toString()+"></div>";
+		content += "<div class='box' id='box"+i.toString()+"></div>";
 	}
-	questionDiv.innerHTML += "</div>"
+	content += "</div>"
+	questionDiv.innerHTML += content;
 	
 	//Drag_source
 	var dragDiv = document.getElementById('drag_source');
