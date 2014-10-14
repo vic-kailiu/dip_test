@@ -122,7 +122,7 @@ function generateQuestion() {
 	}
 	content += "</div>"
 	dragDiv.innerHTML += content;
-	dragDiv.innerHTML += "<div class='boxtotalpiesmodel' id='boxtotalpiesmodel'>Total Pies</div>"
+	dragDiv.innerHTML += "<div class='boxtotalpiesmodel'><div id='totalpiesmodel'>Total Pies</div></div>"
 
 
 }

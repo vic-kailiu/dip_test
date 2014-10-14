@@ -12,20 +12,40 @@
 	width: 100%
 }
 
-.box {
+.box, .box_model {
 	height: 100%;
-	border: 3px solid grey;
 	margin-right:-3px;
+	display: inline-block;
+}
+
+.box {
+	border: 3px solid grey;
 }
 
 .box_model {
-	height: 100%;
 	border: 3px solid transparent;
-	margin-right:-3px;
 }
 
 .model {
 	height: 100%;
 	width: 100%;
 	background-color: purple;
+}
+
+.boxtotalpies, .boxtotalpiesmodel {
+	height: 50px;
+}
+
+.boxtotalpies {
+	border: 3px solid grey;
+}
+
+.boxtotalpiesmodel {
+	border: 3px solid transparent;
+}
+
+#totalpiesmodel {
+	height: 100%;
+	width: 100%;
+	background-color: blue;
 }
