@@ -99,7 +99,7 @@ function generateQuestion() {
 	//boxes
 	var content= "<div class='horizontal' id='drop_container'>"
 	for (i=0; i< count; i++) {
-		content += "<div class='box' id='box"+i.toString()+"' width='"+(95/count)+"%'></div>";
+		content += "<div class='box' id='box"+i.toString()+"' style='width:"+(95/count)+"%'></div>";
 	}
 	content += "</div>"
 	questionDiv.innerHTML += content;
@@ -118,7 +118,7 @@ function generateQuestion() {
 	//boxes
 	var content= "<div class='horizontal' id='drag_container'>"
 	for (i=0; i< count; i++) {
-		content += "<div class='box_model' width='"+(95/count)+"%'><div class='model' id='model"+i.toString()+"'></div></div>";
+		content += "<div class='box_model' style='width:"+(95/count)+"%'><div class='model' id='model"+i.toString()+"'></div></div>";
 	}
 	content += "</div>"
 	dragDiv.innerHTML += content;
