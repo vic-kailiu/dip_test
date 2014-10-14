@@ -98,12 +98,24 @@ function generateQuestion() {
 	questionDiv.innerHTML += "<div class='boxno3' id='boxno3_question'><img src='images/3.png'></div>"
 	//boxes
 	var content= "<div class='horizontal' id='drop_container'>"
+	var strech_arrow = "<div class='boxno15' id='boxno15'>"
 	for (i=0; i< count; i++) {
 		content += "<div class='box' id='box"+i.toString()+"' style='width:"+(95/count)+"%'></div>";
+		strech_arrow += "<div class='strech' style='width:"+(95/count)+"%'>";
+			if (i == 0) {	//add left arrow
+				strech_arrow += "<img src='images/leftA.png'>";
+			}
+			//add line
+			strech_arrow += "<img src='images/line.png'>";
+			if (i+1 > count) { //add right arrow
+				strech_arrow += "<img src='images/rightA.png'>";
+			}
+		strech_arrow += "</div>";
 	}
 	content += "</div>"
+	strech_arrow += "</div>"
 	questionDiv.innerHTML += content;
-	questionDiv.innerHTML += "<div class='boxno15' id='boxno15'><img src='images/15.png'></div>"
+	questionDiv.innerHTML += strech_arrow;
 	questionDiv.innerHTML += "<div class='boxtotalpies' id='boxtotalpies'></div>"
 
 	//Drag_source
