@@ -41,14 +41,17 @@ function generateQuestion() {
     var question=xmlDoc.getElementsByTagName("QUESTION");
     var text=question[0].getElementsByTagName("TEXT");
     var paragraphs = text[0].getElementsByTagName("P");
-    
+    var total = question[0].getElementsByTagName("TOTAL");
+	var unit = question[0].getElementsByTagName("UNIT");
+	
+	//Text of the question
 	var textDiv = document.getElementById('text');
 	if (!textDiv) {
 		alert("cannot get text div!");
 		return;
 	}
-	
 	textDiv.innerHTML = "";	//reset content
+	
 	for (i=0; i<paragraphs.length; i++) {
 		//setup
 		var regex = /([\.,-\/#!$%\^&\*;:{}=\-_`~()])/g; //regular expression for punctuations
@@ -72,4 +75,45 @@ function generateQuestion() {
 		textDiv.innerHTML += "</p>"
 	}
 	
+	//Keyword section
+	var keywordDiv = document.getElementById('keywords');
+	if (!keywordDiv) {
+		alert("cannot get keywords div!");
+		return;
+	}
+	keywordDiv.innerHTML = "";	//reset content
+	
+	var border = 5;
+	var count = total / unit;
+	
+	//Question
+	var questionDiv = document.getElementById('question');
+	if (!questionDiv) {
+		alert("cannot get question div!");
+		return;
+	}
+	questionDiv.innerHTML = "";	//reset content
+	
+	questionDiv.innerHTML += "<div class='boxno3' id='boxno3_question'></div>"
+	questionDiv.innerHTML += "<div class='horizontal'>"
+	for (i=0; i< count; i++) {
+		questionDiv.innerHTML += "<div class='box' id='box"+i.toString()+"></div>";
+	}
+	questionDiv.innerHTML += "</div>"
+	
+	//Drag_source
+	var dragDiv = document.getElementById('drag_source');
+	if (!dragDiv) {
+		alert("cannot get drag div!");
+		return;
+	}
+	dragDiv.innerHTML = "";	//reset content
+	
 }
+
+
+
+
+
+
+
