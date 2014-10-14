@@ -100,7 +100,7 @@ function generateQuestion() {
 	var content= "<div class='horizontal' id='drop_container'>"
 	var strech_arrow = "<div class='boxno15' id='boxno15'>"
 	for (i=0; i< count; i++) {
-		content += "<div class='box' id='box"+i.toString()+"' style='width:"+(95/count)+"%'></div>";
+		content += "<div class='box' id='box"+i.toString()+"' style='width:"+(95/count)+"%' ondrop='drop(event)' ondragover='allowDrop(event)'></div>";
 		strech_arrow += "<div class='strech' style='width:"+(95/count)+"%'>";
 			if (i == 0) {	//add left arrow
 				strech_arrow += "<img class='left_arrow' src='images/leftA.png'>";
@@ -130,7 +130,7 @@ function generateQuestion() {
 	//boxes
 	var content= "<div class='horizontal' id='drag_container'>"
 	for (i=0; i< count; i++) {
-		content += "<div class='box_model' style='width:"+(95/count)+"%'><div class='model' id='model"+i.toString()+"' draggable='true'></div></div>";
+		content += "<div class='box_model' style='width:"+(95/count)+"%'><div class='model' id='model"+i.toString()+"' draggable='true' ondragstart='drag(event)'></div></div>";
 	}
 	content += "</div>"
 	dragDiv.innerHTML += content;
@@ -162,10 +162,11 @@ function drop(ev) {
 }
 
 function registerEvents() {
-	//$('#text').on('click','.clickable', highlight);
-	$(".clickable").click(highlight);
+	$('#text').on('click','.clickable', highlight);
+	//$(".clickable").click(highlight);
 	//$(".box").drop(drop);
 	//$(".box").dragover(allowDrop);
+	
 }
 
 registerEvents();
