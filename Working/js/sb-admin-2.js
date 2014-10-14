@@ -41,8 +41,8 @@ function generateQuestion() {
     var question=xmlDoc.getElementsByTagName("QUESTION");
     var text=question[0].getElementsByTagName("TEXT");
     var paragraphs = text[0].getElementsByTagName("P");
-    var total = question[0].getElementsByTagName("TOTAL");
-	var unit = question[0].getElementsByTagName("UNIT");
+    var total = question[0].getElementsByTagName("TOTAL")[0].firstChild.nodeValue;
+	var unit = question[0].getElementsByTagName("UNIT")[0].firstChild.nodeValue;
 	
 	//Text of the question
 	var textDiv = document.getElementById('text');
@@ -52,10 +52,10 @@ function generateQuestion() {
 	}
 	textDiv.innerHTML = "";	//reset content
 	
-	for (i=0; i<paragraphs.length; i++) {
-		//setup
-		var regex = /([\.,-\/#!$%\^&\*;:{}=\-_`~()])/g; //regular expression for punctuations
-		var punctuations = "\.,-\/#!$%\^&\*;:{}=\-_`~()";
+	//setup
+	var regex = /([\.,-\/#!?$%\^&\*;:{}=\-_`~()])/g; //regular expression for punctuations
+		var punctuations = "\.,-\/#!?$%\^&\*;:{}=\-_`~()";
+	for (i=0; i<paragraphs.length; i++) {		
 		//process to word
 		var s = paragraphs[i].childNodes[0].data.replace(/(^\s*)|(\s*$)/gi,"");
 		s = s.replace(/[ ]{2,}/gi," ");
