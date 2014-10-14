@@ -50,7 +50,7 @@ function generateQuestion() {
 	
 	textDiv.innerHTML = "";
 	for (i=0; i<paragraphs.length; i++) {
-		textDiv.innerHTML += "<p>" + paragraphs[i] + "</p>";
+		textDiv.innerHTML += "<p>" + paragraphs[i].childNodes[0].data + "</p>";
 	}
 	
 }
