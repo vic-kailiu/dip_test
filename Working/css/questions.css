@@ -33,7 +33,8 @@
 }
 
 .boxtotalpies, .boxtotalpiesmodel {
-	height: 50px;
+	height: 80px;
+	width: 30%;
 }
 
 .boxtotalpies {
@@ -42,11 +43,12 @@
 
 .boxtotalpiesmodel {
 	border: 3px solid transparent;
+	display: table;
+	overflow:hidden;
+	#position: relative;
 }
 
 #totalpiesmodel {
-	height: 100%;
-	width: 100%;
 	background-color: blue;
 	#position: absolute; 
 	#top: 50%;
