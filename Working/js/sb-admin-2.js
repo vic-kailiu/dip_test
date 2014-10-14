@@ -137,3 +137,18 @@ function generateQuestion() {
 	dragDiv.innerHTML += "<div class='boxtotalpiesmodel'><div id='totalpiesmodel'><div class='center_text'>Total Pies</div></div></div>"
 }
 
+function highlight(e) {
+	var keywordDiv = document.getElementById('keywords');
+	if (!keywordDiv) {
+		alert("cannot get keywords div!");
+		return;
+	}
+
+	keywordDiv.innerHTML += e.target.textContent + " ";
+}
+
+function registerEvents() {
+	$('.clickable').on('click', highlight);
+}
+
+registerEvents();
