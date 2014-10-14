@@ -63,9 +63,16 @@
 	right: 0;
 }
 
+.left_arrow, .right_arrow {
+	z-index: 10;
+}
+
 .boxtotalpies, .boxtotalpiesmodel {
 	height: 80px;
 	width: 30%;
+	display: table;
+	overflow:hidden;
+	#position: relative;
 }
 
 .boxtotalpies {
@@ -74,9 +81,6 @@
 
 .boxtotalpiesmodel {
 	border: 3px solid transparent;
-	display: table;
-	overflow:hidden;
-	#position: relative;
 }
 
 #totalpiesmodel {
