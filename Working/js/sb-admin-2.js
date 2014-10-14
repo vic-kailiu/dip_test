@@ -114,15 +114,15 @@ function generateQuestion() {
 	}
 	dragDiv.innerHTML = "";	//reset content
 	
-	questionDiv.innerHTML += "<div class='boxno3' id='boxno3_drag'><img src='images/3.png'></div>"
+	dragDiv.innerHTML += "<div class='boxno3' id='boxno3_drag'><img src='images/3.png'></div>"
 	//boxes
 	var content= "<div class='horizontal' id=[drag_container'>"
 	for (i=0; i< count; i++) {
 		content += "<div class='box_model' id='box_model"+i.toString()+"'></div>";
 	}
 	content += "</div>"
-	questionDiv.innerHTML += content;
-	questionDiv.innerHTML += "<div class='boxtotalpiesmodel' id='boxtotalpiesmodel'>Total Pies</div>"
+	dragDiv.innerHTML += content;
+	dragDiv.innerHTML += "<div class='boxtotalpiesmodel' id='boxtotalpiesmodel'>Total Pies</div>"
 
 	
 }
