@@ -99,7 +99,7 @@ function generateQuestion() {
 	
 	var content= "<div class='horizontal'>"
 	for (i=0; i< count; i++) {
-		content += "<div class='box' id='box"+i.toString()+"></div>";
+		content += "<div class='box' id='box"+i.toString()+"'></div>";
 	}
 	content += "</div>"
 	questionDiv.innerHTML += content;
