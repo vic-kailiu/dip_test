@@ -116,7 +116,7 @@ function generateQuestion() {
 	strech_arrow += "</div>"
 	questionDiv.innerHTML += content;
 	questionDiv.innerHTML += strech_arrow;
-	questionDiv.innerHTML += "<div class='boxtotalpies' id='boxtotalpies'></div>"
+	questionDiv.innerHTML += "<div class='boxtotalpies' id='boxtotalpies' ondrop='drop(event)' ondragover='allowDrop(event)'></div>"
 
 	//Drag_source
 	var dragDiv = document.getElementById('drag_source');
@@ -134,7 +134,7 @@ function generateQuestion() {
 	}
 	content += "</div>"
 	dragDiv.innerHTML += content;
-	dragDiv.innerHTML += "<div class='boxtotalpiesmodel'><div id='totalpiesmodel'><div class='center_text'>Total Pies</div></div></div>"
+	dragDiv.innerHTML += "<div class='boxtotalpiesmodel'><div id='totalpiesmodel' ondrop='drop(event)' ondragover='allowDrop(event)'><div class='center_text'>Total Pies</div></div></div>"
 }
 
 function highlight(e) {
