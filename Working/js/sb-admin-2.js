@@ -137,13 +137,3 @@ function generateQuestion() {
 	dragDiv.innerHTML += "<div class='boxtotalpiesmodel'><div id='totalpiesmodel'><div class='center_text'>Total Pies</div></div></div>"
 }
 
-function highlight(string) {
-	foo;
-}
-
-function registerEvents() {
-	$('.clickable').on('click', { $(this).text }, highlight);
-});
-}
-
-registerEvents();
