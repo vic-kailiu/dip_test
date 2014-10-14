@@ -95,15 +95,17 @@ function generateQuestion() {
 	}
 	questionDiv.innerHTML = "";	//reset content
 	
-	questionDiv.innerHTML += "<div class='boxno3' id='boxno3_question'></div>"
-	
+	questionDiv.innerHTML += "<div class='boxno3' id='boxno3_question'><img src='images/3.png'></div>"
+	//boxes
 	var content= "<div class='horizontal'>"
 	for (i=0; i< count; i++) {
 		content += "<div class='box' id='box"+i.toString()+"'></div>";
 	}
 	content += "</div>"
 	questionDiv.innerHTML += content;
-	
+	questionDiv.innerHTML += "<div class='boxno15' id='boxno15'><img src='images/15.png'></div>"
+	questionDiv.innerHTML += "<div class='boxtotalpies' id='boxtotalpies'></div>"
+		
 	//Drag_source
 	var dragDiv = document.getElementById('drag_source');
 	if (!dragDiv) {
@@ -111,6 +113,7 @@ function generateQuestion() {
 		return;
 	}
 	dragDiv.innerHTML = "";	//reset content
+	
 	
 }
 
