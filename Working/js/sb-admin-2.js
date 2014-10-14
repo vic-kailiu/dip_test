@@ -107,8 +107,8 @@ function generateQuestion() {
 			}
 			//add line
 			strech_arrow += "<img src='images/line.png'>";
-			if (i+1 > count) { //add right arrow
-				strech_arrow += "<img src='images/rightA.png'>";
+			if (i+1 >= count) { //add right arrow
+				strech_arrow += "<img src='images/rightB.png'>";
 			}
 		strech_arrow += "</div>";
 	}

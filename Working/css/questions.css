@@ -37,6 +37,17 @@
 	background-color: purple;
 }
 
+.boxno15 {
+	height: 50px;
+	width: 100%;
+}
+
+.strech {
+	height: 100%;
+	margin-right: -3px;
+	display: inline-block;
+}
+
 .boxtotalpies, .boxtotalpiesmodel {
 	height: 80px;
 	width: 30%;
