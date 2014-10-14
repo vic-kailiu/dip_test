@@ -75,7 +75,7 @@ function generateQuestion() {
 		content += "</p>";
 		textDiv.innerHTML += content;
 	}
-	
+
 	//Keyword section
 	var keywordDiv = document.getElementById('keywords');
 	if (!keywordDiv) {
@@ -83,10 +83,10 @@ function generateQuestion() {
 		return;
 	}
 	keywordDiv.innerHTML = "";	//reset content
-	
+
 	var border = 5;
 	var count = total / unit;
-	
+
 	//Question
 	var questionDiv = document.getElementById('question');
 	if (!questionDiv) {
@@ -99,13 +99,13 @@ function generateQuestion() {
 	//boxes
 	var content= "<div class='horizontal' id='drop_container'>"
 	for (i=0; i< count; i++) {
-		content += "<div class='box' id='box"+i.toString()+"'></div>";
+		content += "<div class='box' id='box"+i.toString()+"' width='"+(95/count)"%'></div>";
 	}
 	content += "</div>"
 	questionDiv.innerHTML += content;
 	questionDiv.innerHTML += "<div class='boxno15' id='boxno15'><img src='images/15.png'></div>"
 	questionDiv.innerHTML += "<div class='boxtotalpies' id='boxtotalpies'></div>"
-		
+
 	//Drag_source
 	var dragDiv = document.getElementById('drag_source');
 	if (!dragDiv) {
@@ -116,15 +116,15 @@ function generateQuestion() {
 	
 	dragDiv.innerHTML += "<div class='boxno3' id='boxno3_drag'><img src='images/3.png'></div>"
 	//boxes
-	var content= "<div class='horizontal' id=[drag_container'>"
+	var content= "<div class='horizontal' id='drag_container'>"
 	for (i=0; i< count; i++) {
-		content += "<div class='box_model' id='box_model"+i.toString()+"'></div>";
+		content += "<div class='box_model' width='"+(95/count)"%'><div class='model' id='model"+i.toString()+"'></div></div>";
 	}
 	content += "</div>"
 	dragDiv.innerHTML += content;
 	dragDiv.innerHTML += "<div class='boxtotalpiesmodel' id='boxtotalpiesmodel'>Total Pies</div>"
 
-	
+
 }
 
 
