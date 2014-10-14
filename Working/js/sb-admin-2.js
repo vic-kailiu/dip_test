@@ -28,7 +28,7 @@ $(function() {
 })
 
 function generateQuestion() {
-    /* if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp=new XMLHttpRequest();
     }
     else {// code for IE6, IE5
@@ -40,7 +40,7 @@ function generateQuestion() {
     xmlDoc=xmlhttp.responseXML; 
     var question=xmlDoc.getElementsByTagName("QUESTION");
     var text=question[0].getElementsByTagName("TEXT");
-    var paragraphs = text[0].getElementsByTagName("P"); */
+    var paragraphs = text[0].getElementsByTagName("P");
     
 	var textDiv = document.getElementById('text');
 	if (!textDiv) {
