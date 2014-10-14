@@ -47,7 +47,7 @@ function generateQuestion() {
 	
 	var questionNo = getRandomInt(0, question.length - 1);
     var text=question[questionNo].getElementsByTagName("TEXT");
-    var paragraphs = text[questionNo].getElementsByTagName("P");
+    var paragraphs = text[0].getElementsByTagName("P");
     var total = question[questionNo].getElementsByTagName("TOTAL")[0].firstChild.nodeValue;
 	var unit = question[questionNo].getElementsByTagName("UNIT")[0].firstChild.nodeValue;
 	
