@@ -103,12 +103,12 @@ function generateQuestion() {
 		content += "<div class='box' id='box"+i.toString()+"' style='width:"+(95/count)+"%'></div>";
 		strech_arrow += "<div class='strech' style='width:"+(95/count)+"%'>";
 			if (i == 0) {	//add left arrow
-				strech_arrow += "<img src='images/leftA.png'>";
+				strech_arrow += "<img class='left_arrow' src='images/leftA.png'>";
 			}
 			//add line
-			strech_arrow += "<img src='images/line.png'>";
+			strech_arrow += "<img class='line' src='images/line.png'>";
 			if (i+1 >= count) { //add right arrow
-				strech_arrow += "<img src='images/rightB.png'>";
+				strech_arrow += "<img class='right_arrow' src='images/rightA.png'>";
 			}
 		strech_arrow += "</div>";
 	}
