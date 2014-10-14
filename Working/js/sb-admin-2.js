@@ -69,7 +69,7 @@ function generateQuestion() {
 				content += words[j];
 			}
 			else {
-				content += "<button>" + words[j] + "</button>";
+				content += "<button class='clickable'>" + words[j] + "</button>";
 			}
 		}
 		content += "</p>";
@@ -135,13 +135,15 @@ function generateQuestion() {
 	content += "</div>"
 	dragDiv.innerHTML += content;
 	dragDiv.innerHTML += "<div class='boxtotalpiesmodel'><div id='totalpiesmodel'><div class='center_text'>Total Pies</div></div></div>"
-
-
 }
 
+function highlight(string) {
+	foo;
+}
 
+function registerEvents() {
+	$('.clickable').on('click', { $(this).text() }, highlight);
+});
+}
 
-
-
-
-
+registerEvents();
