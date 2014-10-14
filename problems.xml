@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATA>
+<QUESTION>
+	<TEXT>
+		<P>
+			There are 5 plates of food.
+		</P>
+		<P>
+			Each plate has 3 pies.
+		</P>
+		<P>
+			How many pies are there altogether?
+		</P>
+	</TEXT>
+	<TOTAL>15</TOTAL>
+	<UNIT>3</UNIT>
+</QUESTION>
+<QUESTION>
+	<TEXT>
+		<P>
+			There are 5 plates of food.
+		</P>
+		<P>
+			Each plate has 3 pies.
+		</P>
+		<P>
+			How many pies are there altogether?
+		</P>
+	</TEXT>
+	<TOTAL>15</TOTAL>
+	<UNIT>3</UNIT>
+</QUESTION>
+<QUESTION>
+	<TEXT>
+		<P>
+			There are 5 plates of food.
+		</P>
+		<P>
+			Each plate has 3 pies.
+		</P>
+		<P>
+			How many pies are there altogether?
+		</P>
+	</TEXT>
+	<TOTAL>15</TOTAL>
+	<UNIT>3</UNIT>
+</QUESTION>
+</DATA>
