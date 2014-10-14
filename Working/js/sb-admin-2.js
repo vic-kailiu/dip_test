@@ -134,7 +134,7 @@ function generateQuestion() {
 	}
 	content += "</div>"
 	dragDiv.innerHTML += content;
-	dragDiv.innerHTML += "<div class='boxtotalpiesmodel'><div id='totalpiesmodel' ondrop='drop(event)' ondragover='allowDrop(event)'><div class='center_text'>Total Pies</div></div></div>"
+	dragDiv.innerHTML += "<div class='boxtotalpiesmodel'><div id='totalpiesmodel' draggable='true' ondragstart='drag(event)'><div class='center_text'>Total Pies</div></div></div>"
 }
 
 function highlight(e) {
@@ -143,7 +143,6 @@ function highlight(e) {
 		alert("cannot get keywords div!");
 		return;
 	}
-
 	keywordDiv.innerHTML += e.target.textContent + " ";
 }
 
@@ -163,10 +162,6 @@ function drop(ev) {
 
 function registerEvents() {
 	$('#text').on('click','.clickable', highlight);
-	//$(".clickable").click(highlight);
-	//$(".box").drop(drop);
-	//$(".box").dragover(allowDrop);
-	
 }
 
 registerEvents();
