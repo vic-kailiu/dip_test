@@ -142,7 +142,7 @@ function highlight(string) {
 }
 
 function registerEvents() {
-	$('.clickable').on('click', { $(this).text() }, highlight);
+	$('.clickable').on('click', { $(this).text }, highlight);
 });
 }
 
