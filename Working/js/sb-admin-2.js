@@ -27,6 +27,10 @@ $(function() {
     })
 })
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function generateQuestion() {
     if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp=new XMLHttpRequest();
@@ -39,10 +43,13 @@ function generateQuestion() {
     xmlhttp.send();
     xmlDoc=xmlhttp.responseXML; 
     var question=xmlDoc.getElementsByTagName("QUESTION");
-    var text=question[0].getElementsByTagName("TEXT");
-    var paragraphs = text[0].getElementsByTagName("P");
-    var total = question[0].getElementsByTagName("TOTAL")[0].firstChild.nodeValue;
-	var unit = question[0].getElementsByTagName("UNIT")[0].firstChild.nodeValue;
+	if (!question || question.length == 0) return;
+	
+	var questionNo = getRandomInt(0, question.length - 1);
+    var text=question[questionNo].getElementsByTagName("TEXT");
+    var paragraphs = text[questionNo].getElementsByTagName("P");
+    var total = question[questionNo].getElementsByTagName("TOTAL")[0].firstChild.nodeValue;
+	var unit = question[questionNo].getElementsByTagName("UNIT")[0].firstChild.nodeValue;
 	
 	//Text of the question
 	var textDiv = document.getElementById('text');
